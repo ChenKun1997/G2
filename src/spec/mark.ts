@@ -79,6 +79,7 @@ export type MarkTypes =
   | 'tree'
   | 'wordCloud'
   | 'gauge'
+  | 'progress'
   | MarkComponent;
 
 export type ChannelTypes =
@@ -369,5 +370,9 @@ export type GaugeMark = BaseMark<
   | `pin${Capitalize<ChannelTypes>}`
   | ChannelTypes
 >;
+
+export type ProgressMark = BaseMark<'progress', ChannelTypes> & {
+  intervalShape: 'ring' | 'bar';
+};
 
 export type CustomMark = BaseMark<MarkComponent, ChannelTypes>;

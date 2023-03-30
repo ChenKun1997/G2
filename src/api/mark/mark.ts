@@ -27,6 +27,7 @@ import {
   WordCloudMark,
   HOMMarkMark,
   GaugeMark,
+  ProgressMark,
 } from '../../spec';
 import { NodePropertyDescriptor, defineProps } from '../props';
 import { Concrete } from '../types';
@@ -355,5 +356,12 @@ export class WordCloud extends MarkNode<WordCloudMark> {
 export class Gauge extends MarkNode<GaugeMark> {
   constructor() {
     super({}, 'gauge');
+  }
+}
+
+@defineProps(props)
+export class Progress extends MarkNode<ProgressMark> {
+  constructor() {
+    super({}, 'progress');
   }
 }
